@@ -1,0 +1,27 @@
+{
+  "name": "mini-observable",
+  "version": "1.0.0",
+  "description": "min observable",
+  "main": "./lib/observable.js",
+  "scripts": {
+    "start": "rollup -c rollup.config.js"
+  },
+  "devDependencies": {
+    "rollup": "^0.41.6",
+    "rollup-plugin-buble": "^0.15.0",
+    "rollup-plugin-node-resolve": "^3.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AngusFu/mini-observable.git"
+  },
+  "keywords": [
+    "observable"
+  ],
+  "author": "ansgufuanswer126@qq.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AngusFu/mini-observable/issues"
+  },
+  "homepage": "https://github.com/AngusFu/mini-observable#readme"
+}
