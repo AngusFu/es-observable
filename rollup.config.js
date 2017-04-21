@@ -6,7 +6,7 @@ export default {
   format: 'umd',
   sourceMap: true,
   useStrict: true,
-  moduleName: 'minObservable',
+  moduleName: 'Observable',
   plugins: [
     resolve({
       jsnext: true,
