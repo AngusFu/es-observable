@@ -1,16 +1,18 @@
 # es-observable
 
-`es-observable` was build under the [Observable Proposal](https://tc39.github.io/proposal-observable/)(Stage 1 Draft / January 10, 2017).
+`es-observable` was build under the [Observable Proposal (Stage 1 Draft / January 10, 2017)](https://tc39.github.io/proposal-observable/).
 
 ## References
 
-- [Observable Proposal](https://tc39.github.io/proposal-observable/)
-
 - [ECMAScript® 2018 Language Specification](https://tc39.github.io/ecma262)
 
-- [zen-observable](https://github.com/zenparsing/zen-observable)
+- [TC39: Observable Proposal](https://tc39.github.io/proposal-observable/)
 
-- [es-observable-tests](https://www.npmjs.com/package/es-observable-tests)
+- [TC39: proposal-observable](https://github.com/tc39/proposal-observable)
+
+- [Zenparsing: zen-observable](https://github.com/zenparsing/zen-observable)
+
+- [Zenparsing: es-observable-tests](https://www.npmjs.com/package/es-observable-tests)
 
 ## TODO
 
