@@ -20,6 +20,12 @@ describe('Observable.interval', () => {
     expect(() => Observable.interval(() => {})).toThrow();
   });
 
+  it('subscription is closed', () => {
+    const subscription = Observable.interval(50).subscribe(() => {});
+    jest.runTimersToTime(300);
+    expect(subscription.closed).toBe(false);
+  });
+
   it('works as expected', () => {
     const callback = jest.fn();
 

@@ -30,4 +30,9 @@ describe('Observable.from', () => {
     expect(callback2).toBeCalled();
     expect(callback2.mock.calls.length).toBe(4);
   });
+
+  it('subscription is closed', () => {
+    const subscription = Observable.from([1, 2, 3, 4]).subscribe(() => {});
+    expect(subscription.closed).toBe(true);
+  });
 });
