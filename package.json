@@ -2,13 +2,30 @@
   "name": "es-observable",
   "version": "0.0.1",
   "description": "min observable",
-  "main": "./lib/observable.js",
+  "main": "dist/es-observable.common.js",
+  "module": "dist/es-observable.esm.js",
+  "unpkg": "dist/es-observable.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "start": "rollup -c rollup.config.js",
-    "test": "node ./test/index"
+    "lint": "eslint ./src/*.js",
+    "test:jest": "jest",
+    "test:tc39": "node ./test/tc39",
+    "precommit": "run-s lint test:tc39 test:jest",
+    "build": "rollup -c rollup.config.js",
+    "build:watch": "rollup -c rollup.config.js",
+    "start": "npm run build:watch"
   },
   "devDependencies": {
+    "babel-jest": "^19.0.0",
+    "babel-preset-env": "^1.4.0",
     "es-observable-tests": "^0.3.0",
+    "eslint": "^3.19.0",
+    "eslint-config-google": "^0.7.1",
+    "husky": "^0.13.3",
+    "jest": "^19.0.2",
+    "npm-run-all": "^4.0.2",
     "rollup": "^0.41.6",
     "rollup-plugin-buble": "^0.15.0",
     "rollup-plugin-node-resolve": "^3.0.0",
@@ -26,5 +43,14 @@
   "bugs": {
     "url": "https://github.com/AngusFu/es-observable/issues"
   },
-  "homepage": "https://github.com/AngusFu/es-observable#readme"
+  "homepage": "https://github.com/AngusFu/es-observable#readme",
+  "jest": {
+    "transform": {
+      ".*": "./node_modules/babel-jest"
+    },
+    "bail": true,
+    "verbose": true,
+    "testRegex": "./test/.*.spec.js$",
+    "collectCoverage": true
+  }
 }
