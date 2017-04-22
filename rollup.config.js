@@ -1,7 +1,7 @@
 import buble from 'rollup-plugin-buble';
 import resolve from 'rollup-plugin-node-resolve';
 export default {
-  entry: './lib/observable.js',
+  entry: './lib/index.js',
   dest:  'dist/index.js',
   format: 'umd',
   sourceMap: true,
