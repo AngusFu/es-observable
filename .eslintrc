@@ -15,6 +15,7 @@
     "rules": {
         "comma-dangle": "off",
         "require-jsdoc": "off",
-        "no-invalid-this": "off"
+        "no-invalid-this": "off",
+        "no-extra-semi": "warn"
     }
 }
