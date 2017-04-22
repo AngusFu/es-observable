@@ -31,7 +31,7 @@ describe('Observable.timer', () => {
     expect(subscription.closed).toBe(true);
   });
 
-  it('second argument provided as expected', () => {
+  it('works as expected when second argument provided', () => {
     const callback = jest.fn();
 
     const subscription = Observable.timer(50, 100).subscribe((e) => {
