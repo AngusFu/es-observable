@@ -1,8 +1,6 @@
 import Observable from '../../lib/observable';
 import '../../lib/observable/from';
-import {
-  transform
-} from '../../lib/observable/concat';
+import '../../lib/observable/concat';
 
 describe('Observable.concat', () => {
   it('throws TypeError if any argument is not stream/promise/iterable', () => {
@@ -14,14 +12,6 @@ describe('Observable.concat', () => {
     const observable = Observable.from([0]);
     const promise = Promise.resolve(1);
     const iterable = new Set([2]);
-
-    const observable$ = transform(observable);
-    const promise$ = transform(promise);
-    const iterable$ = transform(iterable);
-
-    expect(observable$).toBe(observable);
-    expect(Observable.isObservable(promise$)).toBe(true);
-    expect(Observable.isObservable(iterable$)).toBe(true);
 
     const arr = [];
     const $1 = Observable.concat(observable, promise);
