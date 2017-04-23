@@ -3,12 +3,13 @@ import '../../lib/observable/from';
 import '../../lib/observable/concat';
 
 describe('Observable.concat', () => {
-  it('throws TypeError if any argument is not stream/promise/iterable', () => {
+  it('throws TypeError if any argument is not' +
+    'Observable/Promise/Iterable', () => {
     expect(() => Observable.concat()).toThrow();
     expect(() => Observable.concat(Observable.from([]), null)).toThrow();
   });
 
-  it('internal transform function works', (done) => {
+  it('works as expected', (done) => {
     const observable = Observable.from([0]);
     const promise = Promise.resolve(1);
     const iterable = new Set([2]);
