@@ -1,21 +1,22 @@
 {
-    "extends": "google",
-    "env": {
-        "browser": true,
-        "commonjs": true,
-        "es6": true,
-        "node": true
+  "extends": "google",
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true,
+    "node": true
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
     },
-    "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
-        },
-        "sourceType": "module"
-    },
-    "rules": {
-        "comma-dangle": "off",
-        "require-jsdoc": "off",
-        "no-invalid-this": "off",
-        "no-extra-semi": "warn"
-    }
+    "sourceType": "module"
+  },
+  "rules": {
+    "comma-dangle": "off",
+    "require-jsdoc": "off",
+    "no-invalid-this": "off",
+    "no-extra-semi": "warn",
+    "indent": ["error", 2]
+  }
 }
