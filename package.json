@@ -1,7 +1,7 @@
 {
   "name": "es-observable",
   "version": "0.0.1",
-  "description": "min observable",
+  "description": "es observable implementation",
   "main": "dist/es-observable.common.js",
   "module": "dist/es-observable.esm.js",
   "unpkg": "dist/es-observable.js",
