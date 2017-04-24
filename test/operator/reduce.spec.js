@@ -9,11 +9,24 @@ describe('operator `filter`', () => {
     expect(() => o.reduce(() => 2)).not.toThrow();
   });
 
-  it('works as expected', (done) => {
+  it('throw type error when stream is empty', (done) => {
     const o = Observable.from([]).reduce((acc, val) => val);
     o.subscribe({
       error(e) {
         expect(e).toBeInstanceOf(TypeError);
+        done();
+      }
+    });
+  });
+
+  it('passes on the error', (done) => {
+    const o = new Observable((o) => {
+      o.error(123);
+    });
+
+    o.subscribe({
+      error(e) {
+        expect(e).toBe(123);
         done();
       }
     });
