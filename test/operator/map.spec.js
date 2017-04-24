@@ -9,6 +9,23 @@ describe('operator `map`', () => {
     expect(() => o.map(() => 2)).not.toThrow();
   });
 
+  it('passes error on', (done) => {
+    const o = Observable.from([1, 2, 3]).map((val) => {
+      throw new TypeError('err');
+    });
+    const fn = jest.fn();
+    o.subscribe({
+      next() {
+        fn();
+      },
+      error(e) {
+        expect(fn.mock.calls.length).toBe(0);
+        expect(e).toBeInstanceOf(TypeError);
+        done();
+      }
+    });
+  });
+
   it('works as expected', (done) => {
     const o = Observable.from([1, 2, 3]).map((val) => val * 2);
     const arr = [];
