@@ -20,13 +20,14 @@ describe('operator `filter`', () => {
   });
 
   it('passes on the error', (done) => {
-    const o = new Observable((o) => {
-      o.error(123);
+    const err = new Error('err');
+    const o = Observable.from([1, 2]).reduce(() => {
+      throw err;
     });
 
     o.subscribe({
       error(e) {
-        expect(e).toBe(123);
+        expect(e).toBe(err);
         done();
       }
     });
