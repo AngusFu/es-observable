@@ -1,6 +1,6 @@
 # es-observable
 
-`es-observable` was build under the [Observable Proposal (Stage 1 Draft / January 10, 2017)](https://tc39.github.io/proposal-observable/).
+`es-observable` is built under the [Observable Proposal (Stage 1 Draft / January 10, 2017)](https://tc39.github.io/proposal-observable/).
 
 ## References
 
