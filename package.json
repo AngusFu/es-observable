@@ -14,7 +14,7 @@
     "test:tc39": "node ./test/tc39",
     "precommit": "run-s lint test:tc39 test:jest",
     "build": "rollup -c rollup.config.js",
-    "build:watch": "rollup -c rollup.config.js",
+    "build:watch": "rollup -c rollup.config.js -w",
     "start": "npm run build:watch"
   },
   "devDependencies": {
