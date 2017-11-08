@@ -5,14 +5,12 @@
   "main": "dist/es-observable.common.js",
   "module": "dist/es-observable.esm.js",
   "unpkg": "dist/es-observable.js",
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "scripts": {
-    "lint": "eslint ./src/*.js",
+    "lint": "standard './src/*.js'",
     "test:jest": "jest",
     "test:tc39": "node ./test/tc39",
-    "precommit": "run-s lint test:tc39 test:jest",
+    "precommit": "npm run build && run-s lint test:tc39 test:jest",
     "build": "rollup -c rollup.config.js",
     "build:watch": "rollup -c rollup.config.js -w",
     "start": "npm run build:watch"
@@ -21,23 +19,19 @@
     "babel-jest": "^19.0.0",
     "babel-preset-env": "^1.4.0",
     "es-observable-tests": "^0.3.0",
-    "eslint": "^3.19.0",
-    "eslint-config-google": "^0.7.1",
     "husky": "^0.13.3",
     "jest": "^19.0.2",
     "npm-run-all": "^4.0.2",
-    "rollup": "^0.41.6",
+    "rollup": "^0.50.0",
     "rollup-plugin-buble": "^0.15.0",
     "rollup-plugin-node-resolve": "^3.0.0",
-    "rollup-watch": "^3.2.2"
+    "standard": "^10.0.3"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AngusFu/es-observable.git"
   },
-  "keywords": [
-    "observable"
-  ],
+  "keywords": ["observable"],
   "author": "ansgufuanswer126@qq.com",
   "license": "MIT",
   "bugs": {
@@ -52,5 +46,17 @@
     "verbose": true,
     "testRegex": "./test/.*.spec.js$",
     "collectCoverage": true
+  },
+  "standard": {
+    "globals": [
+      "beforeEach",
+      "before",
+      "afterEach",
+      "after",
+      "expect",
+      "it",
+      "describe",
+      "jest"
+    ]
   }
 }
